@@ -57,7 +57,7 @@ class ChatClient:
 
     def start_ws(self):
         self.ws = websocket.WebSocketApp(
-            f"wss://kotetsu.sytes.net:152?key={random.randint(1, 11451419194545) * 833}",
+            f"wss://fdsafdsa/?key={random.randint(1, 11451419194545) * 833}",
             on_message=self.on_message,
             on_error=self.on_error,
             on_close=self.on_close
