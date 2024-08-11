@@ -52,7 +52,7 @@ async def handle_connection(websocket, path):
                                 except:
                                     print("カスみたいな通信来たｗｗｗｗｗｗ")
                             else:
-                                await websocke.send(json.dumps({"error": "Message or username too long."}))
+                                await websocket.send(json.dumps({"error": "Message or username too long."}))
                         except:
                             print("エラー")
                 except websockets.ConnectionClosed:
