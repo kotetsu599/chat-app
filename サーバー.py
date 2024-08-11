@@ -48,11 +48,11 @@ async def handle_connection(websocket, path):
                                     joined = data.get("joined","")
                                     name = data.get("name","")
                                     for client in clients:
-                                        await websocket.send(json.dumps({"joined":joined,"name":name}))	
+                                        await client.send(json.dumps({"joined":joined,"name":name}))	
                                 except:
                                     print("カスみたいな通信来たｗｗｗｗｗｗ")
                             else:
-                                await websocket.send(json.dumps({"error": "Message or username too long."}))
+                                await websocke.send(json.dumps({"error": "Message or username too long."}))
                         except:
                             print("エラー")
                 except websockets.ConnectionClosed:
